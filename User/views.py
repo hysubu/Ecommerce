@@ -2,12 +2,12 @@ from django.shortcuts import render,redirect
 from cryptography.fernet import Fernet
 from User .models import *
 from django.contrib import messages 
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 
 # User Regestration View section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
-
+csrf_exempt
 def regestration(request):
     try :
         if request.method == "POST" :
@@ -39,7 +39,7 @@ def regestration(request):
     except Exception as e :
         print(e)
 
-
+csrf_exempt
 def login(request):
     try:
         if request.method == "POST":
@@ -86,14 +86,14 @@ def login(request):
         print(e)
 
 # Log-out  View Section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
-
+csrf_exempt
 def logout(request):
     del request.session["id"]
     messages.success(request,'Logout Successfully !!')
     return redirect('login')
 
 # profile View section>>>>>>>>>>>>>>>>>>>>>>>>>
-
+csrf_exempt
 def profile(request):
     login_user = User.objects.get(id = request.session["id"])
     print("login_user",login_user)
@@ -106,7 +106,7 @@ def profile(request):
     return render(request,'Profile.html',{"user":login_user,"address1":address1,"address2":address2})
 
 # Update Profile section >>>>>>>>>>>>>>>>>>>>>>
-
+csrf_exempt
 def profile_update(request,id):
     print("id",id)
     u_data = User.objects.get(id=id)
@@ -127,7 +127,7 @@ def profile_update(request,id):
 
 
 
-
+csrf_exempt
 def address(request):
     if request.method == "POST":
         user_nam = User.objects.get(id = request.session['id'])
@@ -142,6 +142,7 @@ def address(request):
 
     return render(request,'Address.html')
 
+csrf_exempt
 def forgetpassword(request):
     if request.method == "POST":
         email = request.POST[""]
