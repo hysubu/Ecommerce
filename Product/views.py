@@ -3,7 +3,7 @@ from Product.models import Product,Subcatagory,Catagory,Product_Photo,User,Add_T
 from django.db.models import Q
 from User .models import *
 from User import views
-from xhtml2pdf import pisa
+# from xhtml2pdf import pisa
 from django.template.loader import get_template
 import random
 
