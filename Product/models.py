@@ -3,7 +3,7 @@ from User.models import *
 from django.utils.text import slugify
 
 
-# Create your models here.
+# Create your models here.mbxjchbjhbcjh
 
 
 
