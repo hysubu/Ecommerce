@@ -3,17 +3,20 @@ from Product.models import Product,Subcatagory,Catagory,Product_Photo,User,Add_T
 from django.db.models import Q
 from User .models import *
 from User import views
+from django.views.decorators.csrf import csrf_exempt
 # from xhtml2pdf import pisa
 from django.template.loader import get_template
 import random
 
 # Create your views here.
+
+csrf_exempt
 def shopping(request):
     return render(request,'Shopping.html')
 
 
 
-
+csrf_exempt
 def product_catagory(request):
     try:
         all_catagory = Catagory.objects.all() 
@@ -25,7 +28,7 @@ def product_catagory(request):
 
 # Sub-Catagory and product filter view function 
 
-
+csrf_exempt
 def sub_catagory(request,slug):
     try :
         product = Product.objects.filter( Q( product__slug = slug )| Q(product__sub_catagory__slug = slug))
@@ -37,7 +40,7 @@ def sub_catagory(request,slug):
 
 
 #<<<<<<<<<<<<<<<<<<<<<<< Single Product View >>>>>>>>>>>>>>>>>>>>>
-
+csrf_exempt
 def single_product(request,id):
     try:
         get_product = Product.objects.get(id=id)
@@ -54,7 +57,7 @@ def single_product(request,id):
 
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<< Search product >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+csrf_exempt
 def search_product(request):
     search_product = request.GET.get('query')
     print("search",search_product)
@@ -68,7 +71,7 @@ def search_product(request):
         print("product_detail",product_detail)
     return render(request,'Shopping.html',{"search_product":product,"search":True}) 
 
-
+csrf_exempt
 def single_product(request,id):
     try:
         get_product = Product.objects.get(id=id)
@@ -76,7 +79,7 @@ def single_product(request,id):
     except Exception as e  :
         print(e)
 
-
+csrf_exempt
 def add_to_cart(request):
     try :
         if request.method == "POST":
@@ -93,7 +96,7 @@ def add_to_cart(request):
     return render(request,'Shopping.html')
 
 
-
+csrf_exempt
 def cart_product(request):
     cartuser = User.objects.get(id = request.session["id"])
     print("user",cartuser)
@@ -111,12 +114,12 @@ def cart_product(request):
                                                 "total_quantity":total_quantity,
                                                  "total_price":total_price})
 
-
+csrf_exempt
 def remove_item(request,id):
     Add_To_Cart.objects.get(id=id).delete()
     return redirect('cart-product')
 
-
+csrf_exempt
 def increse_cart_item(request):
     if request.method == "POST":
         product_quantity = request.POST['quantity']
@@ -127,7 +130,7 @@ def increse_cart_item(request):
     return render(request,'Cart_Product.html')
 
 
-
+csrf_exempt
 def decrese_cart_item(request):
     if request.method =="POST":
         product_quantity = request.POST['quantity']
@@ -143,7 +146,7 @@ def decrese_cart_item(request):
 #  Address Selection 
 
 
-
+csrf_exempt
 def addres_selection(request):
     address = Address.objects.filter(username =  User.objects.get(id=request.session['id'])).first
     address2 = Address.objects.filter(username =  User.objects.get(id=request.session['id'])).last
@@ -152,7 +155,7 @@ def addres_selection(request):
     
     return render(request,"Select_Address.html",{"address":address,"address2":address2})
 
-
+csrf_exempt
 def order_address(request):
     if request.method == "POST":
         ord_address = request.POST['address']
@@ -165,6 +168,6 @@ def order_address(request):
         Order_deatil(user=ord_user,order_address=ord_address).save()
         return redirect('place-order')
     return render(request,'Selectadd.html')
-
+csrf_exempt
 def placeorder(request):
     return render(request,'PlaceOrder.html')
