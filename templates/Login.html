@@ -1,0 +1,76 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block main-content %}
+
+
+
+<section class="vh-100"  style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5 fw-bold text-danger">Sign in</h3>
+            <form action="{% url 'login' %}" method="post">
+              {% csrf_token %}
+              <div class="form-outline mb-4">
+                <label class="form-label fw-bold" for="typeEmailX-2">Email</label>
+                <input type="email" id="typeEmailX-2" name="email" class="form-control form-control-lg" />
+              </div>
+  
+              <div class="form-outline mb-4">
+                <label class="form-label fw-bold" for="typePasswordX-2">Password</label>
+                <input type="password" id="typePasswordX-2" name="password" class="form-control form-control-lg" />
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Remember password </label>
+              </div>
+  
+              <input type="submit" class="btn btn-primary " value="Login">
+            </form>
+              <hr class="my-4">
+              <p><a href="{% url 'forget-password' %}">Forget password</a></p>
+              <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39; font-size: 16px"
+                type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+              <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998; margin-top: 12px; font-size: 16px;"
+                type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- <div
+      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary"> -->
+      <!-- Copyright -->
+      <!-- <div class="text-white mb-3 mb-md-0">
+        Copyright © 2020. All rights reserved.
+      </div> -->
+      <!-- Copyright -->
+  
+      <!-- Right -->
+      <!-- <div>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#!" class="text-white">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div> -->
+      <!-- Right -->
+    </div>
+  </section>
+  {% endblock main-content %}

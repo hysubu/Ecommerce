@@ -1,0 +1,108 @@
+
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block main-content %}
+
+
+
+<!-- Navbar -->
+
+<!--Main layout-->
+<main class="mt-5 pt-4">
+    <div class="container mt-5">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+                <img src="{{get_product.product_image.url }}" class="img-fluid" height="" alt="" />
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+                <!--Content-->
+                <div class="p-4">
+                    <div class="mb-3">
+                        <a href="">
+                            <span class="badge bg-dark me-1">{{ get_product.product.sub_catagory_name}}</span>
+                        </a>
+                        <a href="">
+                            <span class="badge bg-info me-1">New</span>
+                        </a>
+                        <a href="">
+                            <span class="badge bg-danger me-1">Bestseller</span>
+                        </a>
+                    </div>
+
+                    <p class="lead">
+                        <span class="me-1">
+                            <del>${{get_product.selling_price}}</del>
+                        </span>
+                        <span>${{get_product.discount_price}}</span>
+                    </p>
+
+                    <strong><p style="font-size: 20px;">Description</p></strong>
+
+                    <p>{{get_product.description}}</p>
+
+                    <form class="d-flex justify-content-left">
+                        <!-- Default input -->
+                        <div class="form-outline me-1" style="width: 100px;">
+                            <input type="number" value="1" class="form-control" />
+                        </div>
+                        <button class="btn btn-primary ms-1" type="submit">
+                            Add to cart
+                            <i class="fas fa-shopping-cart ms-1"></i>
+                        </button>
+                    </form>
+                </div>
+                <!--Content-->
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        <hr />
+
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-md-6 text-center">
+                <h4 class="my-4 h4">Additional information</h4>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit voluptates, quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <img src="{{get_product.product_image.url }}" class="img-fluid1" alt="" />
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="{{get_product.product_image.url }}" class="img-fluid1" alt="" />
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="{{get_product.product_image.url }}" class="img-fluid1" alt="" />
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+</main>
+<!--Main layout-->
+ 
+   
+{% endblock main-content %}

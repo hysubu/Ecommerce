@@ -1,0 +1,37 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+
+
+{% block main-content %}
+
+<div class="card-header bg-primary text-white text-md-center fw-bold mt-4">Select Delivery Address</div>
+
+<div class="card mt-5 " style="margin-left: 50px;">
+    <div class="card-body mt-5  border" >   
+    <button class="btn btn-primary mb-2">Address-1</button>
+    <p class="fw-bold">{{address.username}}</p>
+    <p class="card-text">{{address.city}},<span>{{address.area}}</span> <span>{{address.pincode}}</span> </p>
+    <p>{{address.contact_number}}</p>
+      <a href="#" class="btn btn-warning mx-5">Continue</a>
+    </div>
+  </div>
+  <div class="card mt-4" style="margin-left: 50px;">
+    <div class="card-body border" >
+    <button class="btn btn-primary mb-2">Address-2</button>
+    <p class="fw-bold">{{address.username}}</p>
+      <h5 class="card-title">{{address2.state}}</h5>
+      <p class="card-text">{{address2.city}}, <span>{{address2.area}}</span> <span>{{address2.pincode}}</span> </p>
+      <p>{{address2.contact_number}}</p>
+      <form action="{% url 'order-address' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="address" value="{{address2.contact_number}},{{address2.state}},{{address2.city}},{{address2.area}},{{address2.pincode}}" name="address1">
+        <input class="btn btn-warning" type="submit" value="Coninue">
+      <!-- <a href="{% url 'place-order' %}" class="btn btn-warning mx-5">Continue</a> -->
+    </form>
+    </div>
+    
+  </div>
+{% endblock main-content %}

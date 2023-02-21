@@ -1,0 +1,82 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.nav{
+    height: 200px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  
+.d-flex{
+    /* background-color: red; */
+    margin-top: 10px;
+    margin-left: 1px;
+}
+
+
+.navbar-toggler{
+    margin-top: -37px;
+}
+
+.h-1{
+    color: red;
+}
+}
+
+/* Login - Page */
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+
+
+/* Addresss page */
+
+
+.title-style{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(52, 0%, 98%);
+    }
+    .title-quote{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: hsl(52, 0%, 98%);
+    }
+
+
+/* cart-product */
+
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+
+
+
+    /*Footer >>>>>>>>>>>>>>>>>. */
