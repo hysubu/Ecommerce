@@ -1,0 +1,217 @@
+.owl-carousel .item {
+    /* border: 1px solid black; */
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    ;
+}
+
+.owl-next {
+    float: right;
+}
+
+.owl-prev {
+    float: left;
+}
+
+.owl-prev span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.owl-next span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.gradient-custom {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+.card-custom {
+    border-bottom-left-radius: 10% 50%;
+    border-top-left-radius: 10% 50%;
+    background-color: #f8f9fa;
+}
+
+
+.input-custom {
+    background-color: white;
+}
+
+.white-text {
+    color: hsl(52, 0%, 98%);
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.back-button {
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    color: black;
+    margin-top: 50px;
+}
+
+/* single product html */
+
+body {
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container1 {
+    background: rgb(255, 254, 254);
+    border: none;
+    border-radius: none
+}
+
+.abc {
+    padding-left: 40px
+}
+
+.pqr {
+    padding-right: 70px;
+    padding-top: 14px
+}
+
+.para {
+    float: right;
+    margin-right: 0;
+    padding-left: 80%;
+    top: 0
+}
+
+.fa-star {
+    color: yellow
+}
+
+li {
+    list-style: none;
+    line-height: 50px;
+    color: #000
+}
+
+.col-md-2 {
+    padding-bottom: 20px;
+    font-weight: bold
+}
+
+.col-md-2 a {
+    text-decoration: none;
+    color: #000
+}
+
+.col-md-2.mio {
+    font-size: 12px;
+    padding-top: 7px
+}
+
+.des::after {
+    content: '.';
+    font-size: 0;
+    display: block;
+    border-radius: 20px;
+    height: 6px;
+    width: 55%;
+    background: yellow;
+    margin: 14px 0
+}
+
+.r4 {
+    padding-left: 25px
+}
+
+.btn-outline-warning {
+    border-radius: 0;
+    border: 2px solid yellow;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    width: 70%
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 98%;
+        display: flex;
+        flex-flow: column;
+        text-align: center
+    }
+
+    .des::after {
+        content: '.';
+        font-size: 0;
+        display: block;
+        border-radius: 20px;
+        height: 6px;
+        width: 35%;
+        background: yellow;
+        margin: 10px auto
+    }
+
+    .pqr {
+        text-align: center;
+        margin: 0 30px
+    }
+
+    .para {
+        text-align: center;
+        padding-left: 90px;
+        padding-top: 10px
+    }
+
+    .klo {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        margin-right: 40px
+    }
+}
+
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Base Page  */
+
+@media screen and (max-width: 480px) {
+
+    .log-in {
+        margin-bottom: 1px;
+        padding: 0;
+        height: 10px;
+
+    }
+
+    .reg {
+        margin-top: 1900px;
+        padding: 0;
+    }
+
+    .shoping-x {
+        margin-right: 258px;
+        margin-bottom: 28px;
+        font-size: 20px;
+
+        padding: 0;
+        margin-top: -120px;
+        margin-bottom: -120px;
+
+    }
+
+    .carousel-control-next {
+        margin-bottom: 370px;
+        width: 1rem;
+    }
+
+    .carousel-control-prev {
+        margin-bottom: 370px;
+        width: 1rem;
+    }
+
+}
+
+
+
+
+

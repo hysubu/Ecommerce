@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-4 ">
+    </div>
+
+
+    <div class="col-sm-4 offset-sm-4 pt-1">
+      <button class=" bg-primary "
+        style="padding-left: 10px; margin-left: -10px; padding-right: 10px;padding-top: 20px; padding-bottom:10px ; width: 430px; box-shadow: 1px 2px 3px 1px rgb(161, 161, 157);">
+        <h4 class="text-white">Payment Details</h4>
+      </button>
+      <ul class="list-group pt-5">
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 fw-bold">
+          Price({{product_quantity }} items)<span class="fw-bold ">{{total_amount}}</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center px-0 fw-bold">Shipping
+          Charges<span>Rs. 0.00</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center px-0 fw-bold">Delivery
+          Chagres<span>Rs. 0.00</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+          <div>
+            <strong class="fw-bold">Total Payable</strong><small>(including VAT)</small>
+          </div>
+          <span><strong>Rs. {{total_amount}}</strong></span>
+        </li>
+        <!-- <form action="{% url 'product-detail' %}" method="post"> -->
+          {% csrf_token %}
+          <input type="text" hidden name="address" value="{{product}}"> 
+          <input type="text" hidden name="quantity" value="{{product_quantity}}">
+          <input type="text" hidden name="totalprice" value="{{total_amount}}">
+        <a class="btn btn-warning" href="{% url 'debit-card' %}">Debit Card <i class="far fa-credit-card"></i></a>
+          <br>
+          <input type="submit" class="btn btn-primary d-grid" value="Place Order">
+          <!-- <div class="d-grid"><a href="{% url 'product-detail' %}" class="btn btn-primary">Place Order</a></div> -->
+        </form>
+        <br>
+      </ul>
+      <br>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}

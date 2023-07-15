@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block main-content %}
+<nav class="navbar navbar-expand-lg bg-white  bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-dark" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active text-dark" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item dropdown text-danger" style="margin-left: 10px;">
+          <img loading="lazy" class="_396cs4" alt="Electronics"
+            src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/361d53b8725c2d2d.png?q=100">
+          <a class="nav-link dropdown-toggle text-primary" href="" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Electronics
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/product/filter/laptops/">Laptops</a>
+            <li><a class="dropdown-item" href="/product/filter/mobile/">Mobiles</a></li>
+            <li><a class="dropdown-item" href="/product/filter/trimmer/">Trimmers</a></li>
+            <li><a class="dropdown-item" href="/product/filter/freezer/">Frezzers</a></li>
+          </ul>
+        </li>
+        <!-- Fashions >>>>>>>>>>>>>>>>>> -->
+        <li class="nav-item dropdown" style="margin-left: 60px;">
+          <img loading="lazy" class="_396cs4" alt="Fashion"
+            src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/7f7355480c6adc16.png?q=100">
+          <a class="nav-link dropdown-toggle text-primary" href="" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Fashions
+          </a>
+          <ul class="dropdown-menu p-0">
+            <li style="padding: 0px; margin: 0px;"><a class="dropdown-item text-primary"
+                href="/product/filter/mens/">Mens</a>
+            <li style="margin-left: 20px;"><a class="dropdown-item" href="/product/filter/mens-shirts/">Men-Shirts</a>
+            </li>
+            <li style="margin-left: 20px;"><a class="dropdown-item" href="/product/filter/mens-pants/">Men-Pants</a>
+            </li>
+            <li><a class="dropdown-item text-primary " href="/product/filter/womens/">Womens</a></li>
+            <li style="margin-left: 20px;"><a class="dropdown-item" href="/product/filter/womens-pants/">Women-Pants</a>
+            </li>
+            <li style="margin-left: 20px;"><a class="dropdown-item"
+                href="/product/filter/womens-shirts/">Women-Shirts</a></li>
+          </ul>
+        </li>
+        <!-- Medicens..................... -->
+        <li class="nav-item dropdown" style="margin-left: 60px;">
+          <img loading="eager" class="_396cs4" alt="Dettol Effective Protection Antiseptic Liquid"
+            src="https://rukminim1.flixcart.com/image/80/80/xif0q/antiseptic/n/s/7/-original-imagkfjntuhqh6fk.jpeg?q=70">
+          <a class="nav-link dropdown-toggle text-primary" href="" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Medicens
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/product/filter/handwash/">Handwash</a>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" style="margin-left: 60px;">
+          <img loading="lazy" class="_396cs4" alt="Beauty"
+            src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/f97d6138516056bc.png?q=100">
+          <a class="nav-link dropdown-toggle text-primary" href="" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Beauty
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/product/filter/mens/">Mens</a>
+            <li><a class="dropdown-item" href="/product/filter/womens/">Womens</a></li>
+          </ul>
+        </li>
+        <!-- Furnitures >>>>>>>>>>>>>>>> -->
+      </ul>
+      <!-- Kitchens -->
+      <li class="nav-item dropdown" style="margin-right: 95px;">
+  
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/product/filter/mens/"></a>
+          <li><a class="dropdown-item" href="/product/filter/womens/">Womens</a></li>
+        </ul>
+      </li>
+      <!-- Books -->
+      <li class="nav-item" style="margin-right: 70px;">
+        <img loading="lazy" class="_396cs4"
+          alt="Indian Art And Culture (English | 1st Edition) For UPSC CSE Prelims &amp; Mains By Study IQ"
+          src="https://rukminim1.flixcart.com/image/80/80/xif0q/regionalbooks/q/e/z/indian-art-and-culture-english-1st-edition-for-upsc-cse-prelims-original-imagghhyqjckuqmr.jpeg?q=90">
+        <a class="nav-link text-primary" href=""> Books</a>
+      </li>
+      <!-- grocery >>>>>>>>>>>>>>>>> -->
+      <li class="nav-item" style="margin-right: 70px;">
+        <img loading="lazy" class="_396cs4" alt="Grocery"
+          src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/46376ceed3448aff.png?q=100">
+        <a class="nav-link text-primary" href=""> Grocery</a>
+      </li>
+      <!--  Offers  -->
+      <li class="nav-item" style="margin-right: 30px;">
+        <img loading="lazy" class="_396cs4" alt="Top Offers"
+          src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/47e5c31ef7dcce1e.png?q=100">
+        <a class="nav-link text-danger" href=""> Top Offers</a>
+      </li>
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carouse1">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/hm4.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/hm.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/hm7.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/hm6.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/hm5.png' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+<section style="background-color: #eee;">
+  <div class="p-container container py-5">
+    <div class="row">
+      <!-- Product detail     >>>>>>>>>>>>>>>>> -->
+      {% for product in product %}
+      <div class="product-view col-md-6 mt-5 col-lg-4 mb-4">
+        <div class="card" style="height: 600px;">
+          <div class="d-flex justify-content-between p-3">
+            <p class="lead mb-0">Today's Combo Offer</p>
+            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+              style="width: 35px; height: 35px;">
+              <p class="text-white mb-0 small">x3</p>
+            </div>
+          </div>
+          <a href="{% url 'get-product' product.id %}"><img href="" src="{{product.product_image.url }}"
+              class="card-img-top" height="346px" alt="Gaming Laptop" /></a>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="small"><a href="#!" class="text-muted">{{product.slug}}</a></p>
+              <p class="small text-danger"><s>
+                  <p class="small text-dark"><s><i class="fas fa-rupee-sign"
+                        style="font-size:13px;font-weight: 100; margin-left: 230px;"><span></span></i>{{product.selling_price}}
+                    </s></p>
+                </s></p>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <h5 class="mb-0">{{product.brand}}</h5>
+              <h5 class="text-dark mb-0"><i class="fas fa-rupee-sign"
+                  style="font-size:18px;font-weight: 100;"><span></span></i>{{product.discount_price}}</h5>
+              </h5>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <p class="text-muted mb-0">Available: <span class="fw-bold">5</span></p>
+              <div class="ms-auto text-warning">
+                <i class="fa fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <!-- {{product.id}} -->
+            <form action="{% url 'add-to-cart' %}" method="get">
+              <!-- {% csrf_token %} -->
+              <input type="hidden" value="{{product.id}}" name="item">
+              <!-- <input type="submit" value=""> -->
+              <input type="submit"
+                style="margin-top: 10px;  margin-left: -15px; width: 200px; padding: 5px; height: 48px;"
+                class="btn btn-primary" value="Add-To-Cart">
+            </form>
+            <button style="padding: 5px; width:200px;margin-left: 197px; margin-top: -72px; height: 48px; "
+              class="btn btn-warning">Wishlist</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row">
+      <!--search Product   >>>>>>>>>>>>>>>>> -->
+      {% for product in p_detail %}
+      <div class="col-md-6 mt-5 col-lg-4 mb-4 mb-md-0">
+        <div class="card" style="height: 600px;">
+          <div class="d-flex justify-content-between p-3">
+            <p class="lead mb-0">Today's Combo Offer</p>
+            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+              style="width: 35px; height: 35px;">
+              <p class="text-white mb-0 small">x3</p>
+            </div>
+          </div>
+          <a href="{% url 'get-product' product.id %}"><img href="" src="{{product.product_image.url }}"
+              class="card-img-top" height="346px" alt="Gaming Laptop" /></a>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="small"><a href="#!" class="text-muted">{{product.slug}}</a></p>
+              <p class="small text-danger"><s>
+                  <p class="small text-dark"><s><i class="fas fa-rupee-sign"
+                        style="font-size:13px;font-weight: 100; margin-left: 230px;"><span></span></i>{{product.selling_price}}
+                    </s></p>
+                </s></p>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <h5 class="mb-0">{{product.brand}}</h5>
+              <h5 class="text-dark mb-0"><i class="fas fa-rupee-sign"
+                  style="font-size:18px;font-weight: 100;"><span></span></i>{{product.discount_price}}</h5>
+              </h5>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <p class="text-muted mb-0">Available: <span class="fw-bold">5</span></p>
+              <div class="ms-auto text-warning">
+                <i class="fa fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <!-- {{product.id}} -->
+            <form action="{% url 'add-to-cart' %}" method="get">
+              <!-- {% csrf_token %} -->
+              <input type="hidden" value="{{product.id}}" name="item">
+              <!-- <input type="submit" value=""> -->
+              <input type="submit"
+                style="margin-top: 10px;  margin-left: -15px; width: 160px; padding: 5px; height: 48px;"
+                class="btn btn-primary" value="Add-To-Cart">
+            </form>
+            <button style="padding: 5px; width:200px;margin-left: 16px; margin-top: -72px; height: 48px; "
+              class="btn btn-warning">Wishlist</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock main-content %}

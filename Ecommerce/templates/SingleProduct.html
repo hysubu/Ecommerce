@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block main-content %}
+<div class="container1 py-4 my-4 mx-auto d-flex flex-column">
+    <div class="header">
+        <div class="row r1">
+            <div class="col-md-9 abc">
+                <h1 class=" text-dark"></h1>
+            </div>
+            <!-- <div class="col-md-3 text-right pqr"><i class="fa fa-star text-danger"></i><i class="fa fa-star text-danger"></i><i class="fa fa-star text-danger"></i><i class="fa fa-star text-danger"></i><i class="fa fa-star text-danger"></i></div> -->
+            <p class="text-right para fw-bold text-danger" style="margin-left: 150px;">
+              <path d="M14.78 5.883L9.032 0v3.362C3.284 4.202.822 8.404 0 12.606 2.053 9.666 4.927 8.32 9.032 8.32v3.446l5.748-5.883z" class="_2bvlkb" fill="#c2c2c2" fill-rule="evenodd"></path> 
+              Share</p>
+        </div>
+    </div>
+    <div class="container-body mt-4">
+        <div class="row r3">
+            <div class="col-md-4" style="margin-left: 100px; border-radius: 0.1%; margin-right: -20px; width: 560px; height: 500px;"  > <div id="carouselExampleControls" class="carousel slide w-10" data-bs-ride="carouse1">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{get_product.product_image.url}}"  height="600px" width="500px"alt="..."> 
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{get_product.product_image.url}}"  height="600px"  width="500px" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{get_product.product_image.url}}" height="600px"  width="500px;"  alt="...">
+                  </div>   
+                </div>  
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div> </div>
+              <div class="col-md-5 " style="margin-right: 250px;">
+                <ul style="margin-left: 60px;">
+                  <h5 class="text-muted">{{get_product.brand.upper}}</h5>
+                  <h4 class="fw-bold">{{get_product.title | truncatechars:500 }}</h4>
+                    <li class="text-success fw-bold">Special price</li>
+                    <li> <h4 class="text-dark mb-0"><i class="fas fa-rupee-sign" style="font-size:18px;font-weight: 100;"><span></span></i>{{ get_product.discount_price}}  &nbsp &nbsp<i class="fas fa-rupee-sign text-muted" style="font-size:13px;"></i><del class="text-muted" style="font-size: 13px;"> {{get_product.selling_price}} </del> <span class="fw-bold text-success">&nbsp &nbsp <small> 68% off  </small></span></h4>
+                    <li>
+                      <button class="btn btn-success" style="border-radius: 30px;"> &nbsp3.7&nbsp<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" class="_1wB99o _19cuvx"></button>&nbsp &nbsp  <span class="text-muted fw-bold">47 ratings and 4 reviews </span></li>
+                    <li class="fw-bold">Availabel offers</li>
+                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="_3HLfAg"> &nbsp <b>Special price</b>&nbsp Get extra 39% off (price inclusive of cashback/coupon)</li>
+                    <li> <img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="_3HLfAg">&nbsp  <b>Combo Offer</b> &nbsp Buy 2 items save 5%; Buy 3 or more save 10%</li>
+                    <li> <img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="_3HLfAg"> &nbsp<b>Bank Offer</b> &nbsp   10% off on Citi Credit Card and EMI Transactions, up to ₹1,500. On orders of ₹5,000 and above</li>
+                    <li> <img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="_3HLfAg">&nbsp  <b>Bank Offer</b>  10% off on ICICI Bank Credit Card EMI Transactions, up to ₹1500. On orders of ₹5000 and above</li>
+                    <li>COD Available (All Over India)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer d-flex flex-column mt-5">
+        <div class="row r4">
+            <div class="col-md-2 myt des"><a href="#">Description</a></div>    
+            <div class="col-md-2 myt "><a href="#">Review</a></div> 
+            <button class="btn btn-danger fw-bold" style="width: 150px; margin-left: 380px; height:50px ; color: black;"> Add to cart</button><span><button class="btn btn-warning"   style="width: 150px; margin-left: 1060px;  height:50px ;  margin-top: -130px; font-size: 16px; border-radius: 4px;">Buy Now</button></span>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

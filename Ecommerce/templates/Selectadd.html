@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+
+<div class="container" style="width: 600px; margin-right: 700px;">
+
+    <br>
+    <button class="button-1 bg-primary"
+        style="padding-left: 20px; margin-left: -100px; padding-right: 50px;padding-top: 20px; padding-bottom:10px ; width: 700px; box-shadow: 1px 2px 3px 1px rgb(161, 161, 157);">
+        <h4 class="text-white">Select Delivery Address</h4>
+    </button>
+    <hr>
+    <br>
+
+ 
+    <div class="form-check " style="margin-bottom: 10px;">
+        <!-- <input class="form-check-input" type="radio" value=""> -->
+        <label class="form-check-label fw-bold" for="">
+            Address: {{address.id}} </label>
+    </div>
+    <div class="card">
+        <div class="card-body"> 
+            <p class="fw-bold"> {{address.username}} <button style="border:none; margin-left: 8px;">Home</button></p>
+            <p>{{address.area}}, {{address.city}},<span>{{address.state}}</span>, <span>{{address.pincode}}</span> </p>
+            <p>{{address.contact_number}}</p>
+     
+        </div>
+    </div>
+    <form action="{% url 'order-address' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="address" hidden value="{{address.username}},{{address.area}},{{address.city}},{{address.state}},{{address.pincode}},{{address.contact_number}} ">
+        <div class="text-end">
+        <input class="btn btn-warning mt-3  px-5 fw-bold" type="submit" value="Continue">
+        </div>
+
+
+    <!-- Address -2  -->
+
+    <div class="form-check " style="margin-bottom: 10px;">
+        <label class="form-check-label fw-bold" for="">
+            Address: {{address2.id}} </label>
+    </div>
+    <div class="card">
+        <div class="card-body"> 
+            <p class="fw-bold"> {{address2.username}} <button style="border:none; margin-left: 8px;">Home</button></p>
+            <p>{{address2.area}}, {{address2.city}},<span>{{address2.state}}</span>, <span>{{address2.pincode}}</span> </p>
+            <p>{{address2.contact_number}}</p>
+     
+        </div>
+    </div>
+    <form action="{% url 'order-address' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="address" hidden value="{{address.username}},{{address.area}},{{address.city}},{{address.state}},{{address.pincode}},{{address.contact_number}} ">
+        <div class="text-end">
+        <input class="btn btn-warning mt-3  px-5 fw-bold" type="submit" value="Continue">
+        </div>
+</div>
+{% endblock main-content %}
